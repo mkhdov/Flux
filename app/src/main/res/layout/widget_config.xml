@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/widget_config_title"
+            android:textAppearance="@style/TextAppearance.Flux.Display"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose how your agenda appears on the home screen."
+            android:textAppearance="@style/TextAppearance.Flux.Secondary"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/widget_background"
+            android:textAppearance="@style/TextAppearance.Flux.Title"
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp" />
+
+        <RadioGroup
+            android:id="@+id/config_bg_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="22dp">
+
+            <RadioButton
+                android:id="@+id/config_bg_transparent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/widget_transparent"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/config_bg_white"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/widget_white" />
+
+            <RadioButton
+                android:id="@+id/config_bg_dark"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/widget_dark" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/widget_days"
+            android:textAppearance="@style/TextAppearance.Flux.Title"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/config_days_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7 days"
+            android:textAppearance="@style/TextAppearance.Flux.Secondary"
+            android:layout_marginTop="2dp" />
+
+        <SeekBar
+            android:id="@+id/config_days"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="13"
+            android:progress="6"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Maximum events"
+            android:textAppearance="@style/TextAppearance.Flux.Title"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/config_max_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20 events"
+            android:textAppearance="@style/TextAppearance.Flux.Secondary"
+            android:layout_marginTop="2dp" />
+
+        <SeekBar
+            android:id="@+id/config_max_events"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="45"
+            android:progress="15"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/widget_calendars"
+            android:textAppearance="@style/TextAppearance.Flux.Title"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:id="@+id/config_calendars"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="12dp" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/config_show_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/widget_show_details"
+            android:checked="true" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/config_dim_past"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/widget_dim_past"
+            android:checked="true" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/config_show_plus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/widget_show_plus"
+            android:checked="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/widget_date_action"
+            android:textAppearance="@style/TextAppearance.Flux.Title"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp" />
+
+        <Spinner
+            android:id="@+id/config_date_action"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_input"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/config_apply"
+            style="@style/Flux.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/apply" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/config_cancel"
+            style="@style/Flux.Button.Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/cancel" />
+    </LinearLayout>
+</ScrollView>

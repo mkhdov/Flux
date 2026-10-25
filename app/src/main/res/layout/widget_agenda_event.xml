@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/widget_item_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="46dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="2dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="6dp"
+        android:paddingBottom="4dp">
+
+        <TextView
+            android:id="@+id/widget_color_bar"
+            android:layout_width="3dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="9dp"
+            android:background="#FF4285F4" />
+
+        <TextView
+            android:id="@+id/widget_time"
+            android:layout_width="54dp"
+            android:layout_height="wrap_content"
+            android:textColor="#FF8A8A8E"
+            android:textSize="11sp"
+            android:maxLines="2"
+            android:fontFamily="sans-serif" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/widget_event_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FF111114"
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/widget_event_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FF8A8A8E"
+                android:textSize="11sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/widget_attachment"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="6dp"
+            android:src="@drawable/ic_attach"
+            android:tint="#FF8A8A8E"
+            tools:ignore="UseAppTint"
+            android:contentDescription="@string/attachments"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/widget_divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:layout_marginStart="66dp"
+        android:background="#FFE5E5EA" />
+</LinearLayout>

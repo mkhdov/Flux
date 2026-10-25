@@ -1,0 +1,2 @@
+-keep class com.mkhdov.flux.data.local.entity.** { *; }
+-keepclassmembers class * extends androidx.room.RoomDatabase { *; }

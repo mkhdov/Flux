@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingStart="14dp"
+    android:paddingTop="9dp"
+    android:paddingEnd="8dp"
+    android:paddingBottom="4dp"
+    android:background="@drawable/bg_widget_transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/widget_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Agenda"
+            android:textColor="#FF111114"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="1" />
+
+        <ImageButton
+            android:id="@+id/widget_refresh"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/refresh"
+            android:padding="7dp"
+            android:src="@drawable/ic_sync"
+            android:tint="#FF8A8A8E"
+            tools:ignore="UseAppTint" />
+
+        <ImageButton
+            android:id="@+id/widget_add"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/new_event"
+            android:padding="6dp"
+            android:src="@drawable/ic_add"
+            android:tint="#FFFF3B30"
+            tools:ignore="UseAppTint" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/widget_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:fastScrollEnabled="false"
+        android:scrollbars="none"
+        android:verticalScrollbarPosition="right" />
+</LinearLayout>

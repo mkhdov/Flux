@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="66dp"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/bg_ripple_rect"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="14dp"
+    android:paddingEnd="2dp">
+
+    <View
+        android:id="@+id/calendar_dot"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:background="@drawable/bg_color_dot" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/calendar_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/calendar_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/calendar_default"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:background="@drawable/bg_ripple_circle"
+        android:contentDescription="@string/make_default"
+        android:padding="9dp"
+        android:src="@drawable/ic_star"
+        app:tint="@color/text_tertiary" />
+
+    <ImageButton
+        android:id="@+id/calendar_visibility"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:background="@drawable/bg_ripple_circle"
+        android:contentDescription="@string/visibility"
+        android:padding="9dp"
+        android:src="@drawable/ic_visibility"
+        app:tint="@color/text_secondary" />
+
+    <ImageButton
+        android:id="@+id/calendar_more"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:background="@drawable/bg_ripple_circle"
+        android:contentDescription="@string/more_options"
+        android:padding="9dp"
+        android:src="@drawable/ic_more"
+        app:tint="@color/text_secondary" />
+</LinearLayout>
